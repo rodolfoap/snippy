@@ -1,5 +1,17 @@
 #!/usr/bin/env python3
 
-from snippy.tools import print_
+import unittest
+import inspect
+import subprocess
+from snippy.tools import print_, debug, m2t
+from snippy.experimental.pretty import pretty
 
+debug(inspect.stack())
+value = True
+result = True
 print_('Hello, World!')
+print('Hello, World!')
+debug(inspect.stack(), 'Test ends here.')
+milliseconds=int(subprocess.getoutput('/bin/date +%s%N|/bin/cut -b1-13'))
+print(m2t(milliseconds))
+pretty(['Hello,', 'World!', 'Hello,', 'World!', 'Hello,', 'World!', 'Hello,', 'World!', 'Hello,', 'World!', 'Hello,', 'World!', 'Hello,', 'World!', ['Hello,', 'World!']])

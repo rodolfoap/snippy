@@ -1,6 +1,10 @@
 # Snippets
 
-Just some Python3 snippets.
+Just some Python3 snippets which I intend to grow until conquering Poland.
+
+### Notes
+
+* Packaging based on `git clone git://github.com/vital-fadeev/python-package-template.git`
 
 ### Features
 * setup.py - all distutils, setuptools features
@@ -19,7 +23,3 @@ Just some Python3 snippets.
 * **make init** - install all requirements
 * **make clean** - clean project, remove temporary files
 * **make deploy** - create virtual environment
-
-### Notes
-
-* Packaging based on `git clone git://github.com/vital-fadeev/python-package-template.git`
