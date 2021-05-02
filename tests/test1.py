@@ -3,8 +3,9 @@
 import unittest
 import inspect
 import subprocess
-from snippy.tools import print_, debug, m2t
-from snippy.experimental.pretty import pretty
+from snippy import print_, debug, m2t, row
+from snippy.experimental import prettyprint
+from snippy.tensorflow import protectGpuMemory
 
 class Test(unittest.TestCase):
 
@@ -18,7 +19,11 @@ class Test(unittest.TestCase):
 		debug(inspect.stack(), 'Test ends here.')
 		milliseconds=int(subprocess.getoutput('/bin/date +%s%N|/bin/cut -b1-13'))
 		print(m2t(milliseconds))
-		pretty(['Hello,', 'World!', 'Hello,', 'World!', 'Hello,', 'World!', 'Hello,', 'World!', 'Hello,', 'World!', 'Hello,', 'World!', 'Hello,', 'World!', ['Hello,', 'World!']])
+		prettyprint(['Hello,', 'World!', 'Hello,', 'World!', 'Hello,', 'World!', 'Hello,', 'World!', 'Hello,', 'World!', 'Hello,', 'World!', 'Hello,', 'World!', ['Hello,', 'World!']])
+		row()
+
+	def test_gpu(self):
+		self.assertTrue(protectGpuMemory())
 
 if __name__ == "__main__":
 	unittest.main()

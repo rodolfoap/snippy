@@ -4,7 +4,7 @@ Just some Python3 snippets which I intend to grow until conquering Poland.
 
 ### Notes
 
-* Packaging based on `git clone git://github.com/vital-fadeev/python-package-template.git`
+* Packaging based on https://github.com/vitalfadeev/python-package-template
 
 ### Features
 * setup.py - all distutils, setuptools features
