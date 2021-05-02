@@ -1,0 +1,6 @@
+# use Pandoc’s Markdown: http://www.johnmacfarlane.net/pandoc/
+# or use reStructuredText markup: http://docutils.sourceforge.net/rst.html
+
+# This is the readme file
+
+For now, it just discusses itself.
